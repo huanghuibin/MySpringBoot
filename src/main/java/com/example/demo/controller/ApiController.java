@@ -3,6 +3,7 @@ package com.example.demo.controller;
 import com.example.demo.annotation.Check;
 import com.example.demo.service.UserService;
 import lombok.AllArgsConstructor;
+import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,9 +21,9 @@ public class ApiController {
 
 
     @RequestMapping("/test")
-    @Check(params = {"key"})
+    @RequiresPermissions("user:create")
     public String test(){
-
+//        userService.save();
         return "hello world";
     }
 }

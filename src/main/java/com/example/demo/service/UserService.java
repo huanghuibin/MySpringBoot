@@ -11,4 +11,6 @@ import org.springframework.stereotype.Service;
  * Time:10:30
  */
 public interface UserService extends IService<User> {
+    void save();
+    void saveB();
 }
