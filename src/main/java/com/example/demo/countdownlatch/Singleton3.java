@@ -12,8 +12,8 @@ package com.example.demo.countdownlatch;
  */
 public class Singleton3 {
     private Singleton3(){}
-    private static class Sing {
-        private static final Singleton3 singleton =  new Singleton3();
+    private  static  class Sing {
+        private final static Singleton3 singleton =  new Singleton3();
 
     }
 
